@@ -1,4 +1,20 @@
 <div id="<%= dom_id friend %>">
+
+<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Friend Name</h1>
+        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+          <div>
+            <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-secondary" %> 
+
+            <%= link_to "Back to friends", friends_path, class:"btn btn-secondary"%> 
+            </p>
+
+            <%= button_to "Delete this friend", @friend, method: :delete %>
+        </div>
+      </div>
+    </div>
+
   <p>
     <strong>First name:</strong>
     <%= friend.first_name %>
@@ -23,5 +39,7 @@
     <strong>Twitter:</strong>
     <%= friend.twitter %>
   </p>
+
+  
 
 </div>
